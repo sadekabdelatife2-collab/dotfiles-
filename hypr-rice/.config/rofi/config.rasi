@@ -1,0 +1,85 @@
+configuration {
+    modi: "drun";
+    show-icons: true;
+    icon-theme: "Papirus-Dark";
+    drun-display-format: "{name}";
+    font: "Noto Sans 12";
+}
+
+* {
+    bg:       #151515b3;
+    bg-alt:   #2b2b2b99;
+    sel:      #5a5a5acc;
+    border:   #ffffff22;
+    fg:       #e6e6e6;
+    fg-dim:   #9a9a9a;
+    background-color: transparent;
+    text-color: @fg;
+}
+
+window {
+    width: 560px;
+    background-color: @bg;
+    border: 1px;
+    border-color: @border;
+    border-radius: 18px;
+}
+
+mainbox {
+    padding: 14px;
+    spacing: 12px;
+    children: [inputbar, listview];
+}
+
+inputbar {
+    background-color: @bg-alt;
+    border-radius: 12px;
+    padding: 10px 14px;
+    text-color: #ffffff;
+    children: [entry];
+}
+
+entry {
+    text-color: #ffffff;
+    placeholder: "Search apps...";
+    placeholder-color: @fg-dim;
+}
+
+listview {
+    lines: 8;
+    columns: 1;
+    dynamic: true;
+    fixed-height: false;
+    scrollbar: false;
+    spacing: 4px;
+    border: 0;
+    background-color: transparent;
+}
+
+element {
+    padding: 8px 12px;
+    spacing: 12px;
+    border-radius: 10px;
+}
+
+element normal.normal, element alternate.normal {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element selected.normal {
+    background-color: @sel;
+    text-color: #ffffff;
+}
+
+element-icon {
+    size: 28px;
+    background-color: transparent;
+}
+
+element-text {
+    vertical-align: 0.5;
+    text-color: inherit;
+    background-color: transparent;
+}
+
